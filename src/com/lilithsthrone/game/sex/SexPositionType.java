@@ -128,7 +128,8 @@ public enum SexPositionType {
 									new SexActionInteractions(
 											Util.mergeMaps(
 													SexActionPresets.fingerToLowerHalf,
-													SexActionPresets.penisToFeet),
+													SexActionPresets.penisToFeet,
+													SexActionPresets.mouthToFeet),
 												Util.newArrayListOfValues(
 														OrgasmCumTarget.SELF_STOMACH,
 														OrgasmCumTarget.SELF_GROIN,
@@ -298,7 +299,8 @@ public enum SexPositionType {
 									new SexActionInteractions(
 											Util.mergeMaps(
 												SexActionPresets.fingerToLowerHalf,
-												SexActionPresets.penisToFeet),
+												SexActionPresets.penisToFeet,
+													SexActionPresets.mouthToFeet),
 											Util.newArrayListOfValues(
 														OrgasmCumTarget.SELF_GROIN,
 														OrgasmCumTarget.SELF_BREASTS,
@@ -525,7 +527,8 @@ public enum SexPositionType {
 									new SexActionInteractions(
 											Util.mergeMaps(
 												SexActionPresets.fingerToLowerHalf,
-												SexActionPresets.penisToFeet),
+												SexActionPresets.penisToFeet,
+													SexActionPresets.mouthToFeet),
 											Util.newArrayListOfValues(
 													OrgasmCumTarget.FLOOR))))),
 					new Value<>(
@@ -778,7 +781,8 @@ public enum SexPositionType {
 									SexPositionSlot.DOGGY_ON_ALL_FOURS,
 									new SexActionInteractions(
 											Util.mergeMaps(
-													SexActionPresets.penisToFeet),
+													SexActionPresets.penisToFeet,
+													SexActionPresets.mouthToFeet),
 											Util.newArrayListOfValues(
 													OrgasmCumTarget.FLOOR))))),
 					new Value<>(
@@ -788,7 +792,8 @@ public enum SexPositionType {
 									SexPositionSlot.DOGGY_ON_ALL_FOURS_SECOND,
 									new SexActionInteractions(
 											Util.mergeMaps(
-													SexActionPresets.penisToFeet),
+													SexActionPresets.penisToFeet,
+													SexActionPresets.mouthToFeet),
 											Util.newArrayListOfValues(
 													OrgasmCumTarget.FLOOR))))))) {
 		@Override
@@ -1250,7 +1255,8 @@ public enum SexPositionType {
 									new SexActionInteractions(
 											Util.mergeMaps(
 												SexActionPresets.fingerToLowerHalf,
-												SexActionPresets.penisToFeet),
+												SexActionPresets.penisToFeet,
+													SexActionPresets.mouthToFeet),
 											Util.newArrayListOfValues(
 													OrgasmCumTarget.SELF_STOMACH,
 													OrgasmCumTarget.SELF_GROIN,
@@ -1539,7 +1545,8 @@ public enum SexPositionType {
 													SexActionPresets.kissing,
 													SexActionPresets.mouthToBreasts,
 													SexActionPresets.breastsToMouth,
-													SexActionPresets.penisToFeet),
+													SexActionPresets.penisToFeet,
+													SexActionPresets.mouthToFeet),
 											Util.newArrayListOfValues(
 													OrgasmCumTarget.HAIR,
 													OrgasmCumTarget.FACE,
@@ -1843,7 +1850,8 @@ public enum SexPositionType {
 						SexActionPresets.kissing,
 						SexActionPresets.mouthToBreasts,
 						SexActionPresets.breastsToMouth,
-						SexActionPresets.penisToFeet);
+						SexActionPresets.penisToFeet,
+						SexActionPresets.mouthToFeet);
 				
 				List<OrgasmCumTarget> orgasmTargets = Util.newArrayListOfValues(
 						OrgasmCumTarget.ASS,
@@ -1859,7 +1867,8 @@ public enum SexPositionType {
 					interactions = Util.mergeMaps(
 							SexActionPresets.appendagesToAss,
 							SexActionPresets.groinToAss,
-							SexActionPresets.penisToFeet);
+							SexActionPresets.penisToFeet,
+							SexActionPresets.mouthToFeet);
 					orgasmTargets = Util.newArrayListOfValues(
 							OrgasmCumTarget.ASS,
 							OrgasmCumTarget.LEGS,
@@ -1871,7 +1880,8 @@ public enum SexPositionType {
 							SexActionPresets.appendagesToLowerHalf,
 							SexActionPresets.groinToGroin,
 							SexActionPresets.groinToAss,
-							SexActionPresets.penisToFeet);
+							SexActionPresets.penisToFeet,
+							SexActionPresets.mouthToFeet);
 					orgasmTargets = Util.newArrayListOfValues(
 							OrgasmCumTarget.ASS,
 							OrgasmCumTarget.GROIN,
@@ -1887,7 +1897,8 @@ public enum SexPositionType {
 							SexActionPresets.groinToAss,
 							SexActionPresets.mouthToBreasts,
 							SexActionPresets.breastsToMouth,
-							SexActionPresets.penisToFeet);
+							SexActionPresets.penisToFeet,
+							SexActionPresets.mouthToFeet);
 					orgasmTargets = Util.newArrayListOfValues(
 							OrgasmCumTarget.ASS,
 							OrgasmCumTarget.GROIN,
@@ -2126,7 +2137,8 @@ public enum SexPositionType {
 							SexActionPresets.kissing,
 							SexActionPresets.mouthToBreasts,
 							SexActionPresets.breastsToMouth,
-							SexActionPresets.penisToFeet),
+							SexActionPresets.penisToFeet,
+							SexActionPresets.mouthToFeet),
 					Util.newArrayListOfValues(
 							OrgasmCumTarget.HAIR,
 							OrgasmCumTarget.FACE,
@@ -2260,7 +2272,8 @@ public enum SexPositionType {
 									new SexActionInteractions(
 											Util.mergeMaps(
 													SexActionPresets.fingerToLowerHalf,
-													SexActionPresets.penisToFeet),
+													SexActionPresets.penisToFeet,
+													SexActionPresets.mouthToFeet),
 											Util.newArrayListOfValues(
 													OrgasmCumTarget.SELF_STOMACH,
 													OrgasmCumTarget.SELF_GROIN,
@@ -2690,7 +2703,8 @@ public enum SexPositionType {
 									new SexActionInteractions(
 											Util.mergeMaps(
 											SexActionPresets.fingerToLowerHalf,
-											SexActionPresets.penisToFeet),
+											SexActionPresets.penisToFeet,
+													SexActionPresets.mouthToFeet),
 											KNEELING_ORAL.getSexInteractions(SexPositionSlot.KNEELING_PERFORMING_ORAL, SexPositionSlot.KNEELING_RECEIVING_ORAL).getAvailableCumTargets())))))) {
 		@Override
 		public String getDescription() {
@@ -3400,7 +3414,8 @@ public enum SexPositionType {
 									new SexActionInteractions(
 											Util.mergeMaps(
 												SexActionPresets.fingerToLowerHalf,
-												SexActionPresets.penisToFeet),
+												SexActionPresets.penisToFeet,
+													SexActionPresets.mouthToFeet),
 											KNEELING_ORAL.getSexInteractions(SexPositionSlot.KNEELING_PERFORMING_ORAL, SexPositionSlot.KNEELING_RECEIVING_ORAL).getAvailableCumTargets())))))) {
 		@Override
 		public String getDescription() {

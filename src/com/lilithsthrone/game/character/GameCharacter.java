@@ -9783,6 +9783,36 @@ public abstract class GameCharacter implements XMLSaving {
 			}
 			
 			
+		} else if(penetrationType == SexAreaPenetration.FOOT && orifice == SexAreaPenetration.TONGUE) {
+			if(initialPenetration) {
+				if(Sex.getSexPositionSlot(characterPenetrating).isStanding(characterPenetrating)) {
+					return UtilText.parse(characterPenetrated, characterPenetrating,
+							"[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc2.she] [npc2.verb(push)] [npc2.her] [npc2.foot+] into [npc.namePos] face, before lying back and enjoying the attention.");
+				} else {
+					return UtilText.parse(characterPenetrated, characterPenetrating,
+							"[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc2.she] [npc2.verb(push)] [npc2.her] [npc2.feet+] into [npc.namePos] face, before lying back and enjoying the attention.");
+				}
+
+			} else {
+				return generateGenericPenetrationDescription(characterPenetrating, penetrationType, characterPenetrated, orifice);
+			}
+
+		} else if(penetrationType == SexAreaPenetration.TONGUE && orifice == SexAreaPenetration.FOOT) {
+			if(initialPenetration) {
+				if(Sex.getSexPositionSlot(characterPenetrated).isStanding(characterPenetrated)) {
+					return UtilText.parse(characterPenetrated, characterPenetrating,
+							"[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc2.she] [npc2.verb(push)] [npc.namePos] [npc.foot+] up against [npc2.her] face,"
+									+ " before running [npc2.her] [npc2.tongue+] over [npc.her] sole and [npc.toes+].");
+				} else {
+					return UtilText.parse(characterPenetrated, characterPenetrating,
+							"[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc2.she] [npc2.verb(push)] [npc.namePos] [npc.feet+] up against [npc2.her] face,"
+									+ " before running [npc2.her] [npc2.tongue+] over [npc.her] soles and [npc.toes+].");
+				}
+			} else {
+				return generateGenericPenetrationDescription(characterPenetrating, penetrationType, characterPenetrated, orifice);
+			}
+
+
 		} else if(penetrationType == SexAreaPenetration.FOOT && orifice == SexAreaPenetration.PENIS) {
 			if(initialPenetration) {
 				if(Sex.getSexPositionSlot(characterPenetrating).isStanding(characterPenetrating)) {

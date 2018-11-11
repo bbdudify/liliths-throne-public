@@ -1,5 +1,7 @@
 package com.lilithsthrone.game.sex.sexActions;
 
+import com.lilithsthrone.game.sex.sexActions.baseActions.TongueFeet;
+import com.lilithsthrone.game.sex.sexActions.baseActions.TongueFoot;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -175,9 +177,10 @@ public class SexActionPresets {
 	public static HashMap<SexAreaInterface, List<SexAreaInterface>> assToGroin = new HashMap<>();
 
 	public static HashMap<SexAreaInterface, List<SexAreaInterface>> kissing = new HashMap<>();
-	
+
 	public static HashMap<SexAreaInterface, List<SexAreaInterface>> mouthToBreasts = new HashMap<>();
-	
+	public static HashMap<SexAreaInterface, List<SexAreaInterface>> mouthToFeet = new HashMap<>();
+
 	public static HashMap<SexAreaInterface, List<SexAreaInterface>> breastsToMouth = new HashMap<>();
 	
 	static {
@@ -227,6 +230,7 @@ public class SexActionPresets {
 		
 		for(SexAreaInterface area : mouthAreas) {
 			mouthToBreasts.put(area, breastAreas);
+			mouthToFeet.put(area, feetAreas);
 		}
 		
 		for(SexAreaInterface area : breastAreas) {
@@ -286,6 +290,8 @@ public class SexActionPresets {
 		sexActions.add(TongueBreasts.class);
 		sexActions.add(TongueNipple.class);
 		sexActions.add(PenisMouth.class);
+		sexActions.add(TongueFoot.class);
+		sexActions.add(TongueFeet.class);
 
 		// Tail actions:
 		sexActions.add(TailAnus.class);
