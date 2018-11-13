@@ -299,8 +299,7 @@ public enum SexPositionType {
 									new SexActionInteractions(
 											Util.mergeMaps(
 												SexActionPresets.fingerToLowerHalf,
-												SexActionPresets.penisToFeet,
-													SexActionPresets.mouthToFeet),
+												SexActionPresets.penisToFeet),
 											Util.newArrayListOfValues(
 														OrgasmCumTarget.SELF_GROIN,
 														OrgasmCumTarget.SELF_BREASTS,
@@ -1175,7 +1174,8 @@ public enum SexPositionType {
 												SexActionPresets.vaginaToMouth,
 												SexActionPresets.assToMouth,
 												SexActionPresets.penisToMouth,
-												SexActionPresets.penisToBreasts),
+												SexActionPresets.penisToBreasts,
+												SexActionPresets.mouthToFeet),
 										Util.newArrayListOfValues(
 												OrgasmCumTarget.FACE,
 												OrgasmCumTarget.BREASTS,
@@ -1194,7 +1194,8 @@ public enum SexPositionType {
 											SexActionPresets.vaginaToMouth,
 											SexActionPresets.assToMouth,
 											SexActionPresets.penisToMouth,
-											SexActionPresets.penisToBreasts),
+											SexActionPresets.penisToBreasts,
+												SexActionPresets.mouthToFeet),
 										Util.newArrayListOfValues(
 												OrgasmCumTarget.SELF_STOMACH,
 												OrgasmCumTarget.SELF_BREASTS,

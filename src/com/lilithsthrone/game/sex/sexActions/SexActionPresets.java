@@ -1,7 +1,6 @@
 package com.lilithsthrone.game.sex.sexActions;
 
-import com.lilithsthrone.game.sex.sexActions.baseActions.TongueFeet;
-import com.lilithsthrone.game.sex.sexActions.baseActions.TongueFoot;
+import com.lilithsthrone.game.sex.sexActions.baseActions.MouthFeet;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -290,8 +289,7 @@ public class SexActionPresets {
 		sexActions.add(TongueBreasts.class);
 		sexActions.add(TongueNipple.class);
 		sexActions.add(PenisMouth.class);
-		sexActions.add(TongueFoot.class);
-		sexActions.add(TongueFeet.class);
+		sexActions.add(MouthFeet.class);
 
 		// Tail actions:
 		sexActions.add(TailAnus.class);
