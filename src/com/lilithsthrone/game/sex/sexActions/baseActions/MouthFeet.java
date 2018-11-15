@@ -37,12 +37,12 @@ public class MouthFeet {
 
     @Override
     public String getActionTitle() {
-      return "Worship [npc2.feet]";
+      return "Suck [npc2.toes]";
     }
 
     @Override
     public String getActionDescription() {
-      return "Pull [npc2.namePos] [npc2.feet] to your [npc.lips] and worship them.";
+      return "Suck [npc2.namePos] [npc2.toes].";
     }
 
     @Override
@@ -50,89 +50,52 @@ public class MouthFeet {
 
       UtilText.nodeContentSB.setLength(0);
 
-      switch (Sex.getCharacterPerformingAction().getLegType().getFootType()) {
-        case HUMANOID:
-        case PAWS:
-          UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-              "Grabbing [npc2.namePos] [npc2.feet+] and pressing them against [npc.her] [npc.lips+], [npc.name] [npc.verb(begin)] kissing [npc2.her] soles and [npc2.toes+],"
-                  + " before [npc.eagerly] running [npc.her] [npc.tongue] along the entire length of [npc2.her] [npc2.foot]."
-              , "[npc.Name] [npc.verb(bring)] [npc2.namePos] [npc2.feet+] to [npc.her] [npc.lips+],"
-                  + " before [npc.eagerly] kissing onto [npc2.her] soles and [npc2.toes]."));
-
-          switch (Sex.getSexPace(Sex.getCharacterTargetedForSexAction(this))) {
-            case SUB_RESISTING:
-              UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-                  " [npc2.Name] [npc2.verb(let)] out [npc2.a_sob+] as [npc.name] [npc.verb(start)] grabbing and licking [npc2.her] [npc2.feet], and,"
-                      + " with tears running down [npc2.her] [npc2.face], [npc2.she] desperately [npc2.verb(beg)] for [npc.herHim] to stop.",
-
-                  " With [npc2.a_sob+], [npc2.name] [npc2.verb(try)] to pull away from [npc.name];"
-                      + " tears running down [npc2.her] [npc2.face] as [npc.namePos] [npc.tongue] [npc.verb(start)] licking [npc2.her] [npc2.feet]."));
-              break;
-            default:
-              UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-                  " [npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(start)] worshiping [npc2.her] [npc2.feet+],"
-                      + " before [npc2.eagerly] pressing them onto [npc.her] face.",
-
-                  " With [npc2.a_moan+], [npc2.name] [npc2.eagerly] [npc2.verb(press)] [npc2.her] [npc2.feet+] into [npc.namePos] face as [npc.she] [npc.verb(begin)] worshiping them."));
-              break;
-          }
+      switch (Sex.getSexPace(Sex.getCharacterPerformingAction())) {
+        case DOM_GENTLE:
+        case DOM_NORMAL:
+        case DOM_ROUGH:
+          UtilText.nodeContentSB.append(UtilText.returnStringAtRandom());
           break;
-
-        case HOOFS:
+        default:
           UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-              "[npc.Eagerly(bringing)] [npc2.namePos] hard hoofs up to [npc.her] face, [npc.name] carefully [npc.verb(press)] one of the to [npc.her] [npc.lips],"
-                  + " before [npc.eagerly] running [npc.her] [npc.tongue] along the entire length of [npc2.her] hoof.",
-
-              "[npc.Name] [npc.verb(begin)] kissing the sole of one of [npc2.namePos] hard hoofs,"
-                  + " before [npc.eagerly] running [npc.her] [npc.tongue] along the entire length of one."));
-
-          switch (Sex.getSexPace(Sex.getCharacterTargetedForSexAction(this))) {
-            case SUB_RESISTING:
-              UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-                  " [npc2.Name] [npc2.verb(let)] out [npc2.a_sob+] as [npc.name] [npc.verb(start)] using [npc2.her] [npc2.feet], and,"
-                      + " with tears running down [npc2.her] [npc2.face], [npc2.she] desperately [npc2.verb(beg)] for [npc.herHim] to stop.",
-
-                  " With [npc2.a_sob+], [npc2.name] [npc2.verb(try)] to pull away from [npc.name];"
-                      + " tears running down [npc2.her] [npc2.face] as [npc.Name] kisses [npc2.her] [npc2.feet]."));
-              break;
-            default:
-              UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-                  " [npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(start)] worshipping [npc2.her] [npc2.feet+],"
-                      + " before [npc2.eagerly] pressing them harder into [npc.her] face.",
-
-                  " With [npc2.a_moan+], [npc2.name] [npc2.verb(start)] [npc2.eagerly] pressing [npc2.her] [npc2.feet+] into [npc.namePos] face."));
-              break;
-          }
-          break;
-
-        case TALONS:
-          UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-              "[npc.Eagerly(curling)] [npc2.namePos] bird-like feet around [npc.her] face, [npc.name] makes sure that [npc2.her] sharp talons are clear"
-                  + " before kissing and suckling on [npc2.her] soles and [npc2.toes+].",
-
-              "[npc.Name] [npc.verb(begin)] kissing the sole of [npc2.namePos] bird-like feet,"
-                  + " bringing them up to [npc.her] face as [npc.she] suckles on [npc2.her] [npc2.toes+]."));
-
-          switch (Sex.getSexPace(Sex.getCharacterTargetedForSexAction(this))) {
-            case SUB_RESISTING:
-              UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-                  " [npc2.Name] [npc2.verb(let)] out [npc2.a_sob+] as [npc.name] [npc.verb(start)] using [npc2.her] [npc2.feet], and,"
-                      + " with tears running down [npc2.her] [npc2.face], [npc2.she] desperately [npc2.verb(beg)] for [npc.herHim] to stop.",
-
-                  " With [npc2.a_sob+], [npc2.name] [npc2.verb(try)] to pull away from [npc.name];"
-                      + " tears running down [npc2.her] [npc2.face] as [npc.Name] kisses [npc2.her] [npc2.feet]."));
-              break;
-            default:
-              UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-                  " [npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(start)] worshipping [npc2.her] [npc2.feet],"
-                      + " [npc2.eagerly] pressing them harder into [npc.her] face.",
-
-                  " With [npc2.a_moan+], [npc2.name] [npc2.verb(start)] [npc2.eagerly] pressing [npc2.her] [npc2.feet+] into [npc.namePos] face."));
-              break;
-          }
+              "With lust in [npc.her] [npc.eyes], [npc.namePos] gaze lingers on [npc2.namePos] [npc2.foot+].  [npc.She] [npc.verb(reach)] out and [npc.verb(wrap)] [npc.her] hands around it, massaging the [npc2.skin+] underneath with [npc.her] [npc.fingers]. ",
+              "Gazing at [npc2.namePos] [npc2.feet+], [npc.name] [npc.verb(wrap)] [npc.her] hands around them and [npc.verb(begin)] rubbing the soles with [npc.her] [npc.fingers], massaging the [npc2.skin+]. "
+          ));
           break;
       }
 
+      switch (Sex.getSexPace(Sex.getCharacterTargetedForSexAction(this))) {
+        case SUB_EAGER:
+          UtilText.nodeContentSB.append(UtilText.returnStringAtRandom());
+          break;
+        case SUB_NORMAL:
+          UtilText.nodeContentSB.append(UtilText.returnStringAtRandom());
+          break;
+        case SUB_RESISTING:
+          UtilText.nodeContentSB.append(UtilText.returnStringAtRandom());
+          break;
+        case DOM_GENTLE:
+          UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
+              "[npc2.speech(Mmm, that feels nice...)], [npc2.name] [npc2.moansVerb], enjoying [npc.namePos] [npc.fingers] on [npc2.her] sole. [npc2.speech(Keep going...)] Obliging [npc2.herHim], [npc.name] [npc.verb(begin)] kissing up [npc2.her] sole until [npc.she] [npc.verb(get)] to [npc2.her] [npc2.toes], placing them into [npc.her] mouth and sucking on them.",
+              "[npc2.name] [npc2.verb(let)] out [npc2.a_moan], clearly enjoying the sensation.  Spurred on, [npc.name] [npc.verb(rub)] each of [npc2.her] [npc2.toes] with [npc.her] [npc.fingers], bringing them closer to [npc.her] [npc.lips] and placing them in [npc.her] mouth."
+          ));
+          break;
+        case DOM_NORMAL:
+          UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
+              "[npc2.speech(Aww, does someone want my [npc2.feet]?)], [npc2.name] [npc2.verb(tease)], curling [npc2.her] [npc2.toes] around [npc.namePos] hands and placing the other [npc2.foot] on [npc.her] [npc.face]. [npc2.speech(Well then, how about some more...)], [npc2.she] [npc2.moansVerb], before pushing [npc2.her] [npc2.toes] into [npc.her] mouth.",
+              "[npc2.speech(Ooo, someone likes my [npc2.feet]...)], [npc2.name] [npc2.verb(tease)], pressing [npc2.her] [npc2.foot] into [npc.namePos] hands. [npc2.speech(Well, if you like it so much, how about a taste...)], [npc2.she] [npc2.moansVerb], bringing [npc2.her] other [npc2.foot] to [npc.namePos] [npc.lips] and gently pressing [npc2.her] [npc2.toes] into [npc.her] mouth."
+          ));
+          break;
+        case DOM_ROUGH:
+          UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
+              "Immediately, [npc2.name] [npc2.verb(yank)] [npc2.her] [npc2.foot] from [npc.namePos] grasp and [npc2.verb(grind)] it into [npc.her] [npc.face]. [npc2.speech(So you like my [npc2.feet] huh? Well then, put that mouth to use my little [npc2.foot][npc.boy])], [npc2.she] [npc.verb(taunt)], before roughly shoving [npc2.her] [npc2.toes] into [npc.namePos] mouth.",
+              "[npc2.name] [npc2.verb(let)] out a chuckle before shoving [npc2.her] [npc2.foot] out of [npc.namePos] grasp and into [npc.her] face, grinding [npc2.her] heel on [npc.her] mouth. [npc2.speech(If you're gonna enjoy my [npc2.feet], you're gonna use your mouth)], [npc2.she] [npc2.verb(order)], moving [npc2.her] [npc2.foot] down and shoving [npc2.her] [npc2.toes] past [npc.her] lips."
+          ));
+          break;
+        default:
+          UtilText.nodeContentSB.append(UtilText.returnStringAtRandom());
+          break;
+      }
       return UtilText.nodeContentSB.toString();
     }
 
@@ -291,12 +254,12 @@ public class MouthFeet {
 
     @Override
     public String getActionTitle() {
-      return "Worship [npc2.feet]";
+      return "Suck [npc2.toes]";
     }
 
     @Override
     public String getActionDescription() {
-      return "Continue worshipping [npc2.namePos] [npc2.feet].";
+      return "Continue sucking [npc2.namePos] [npc2.toes].";
     }
 
     @Override
@@ -337,12 +300,12 @@ public class MouthFeet {
 
     @Override
     public String getActionTitle() {
-      return "Eager [npc2.foot] worship";
+      return "Worship [npc2.feet]";
     }
 
     @Override
     public String getActionDescription() {
-      return "Eagerly worship [npc2.namePos] [npc2.feet].";
+      return "Worship [npc2.namePos] [npc2.feet].";
     }
 
     @Override
@@ -351,16 +314,11 @@ public class MouthFeet {
       UtilText.nodeContentSB.setLength(0);
 
       UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-          "Eagerly grabbing onto [npc2.namePos] [npc2.feet+] into [npc.her] face,"
-              + " [npc.name] [npc.verb(start)] energetically running [npc.her] [npc.tongue] up and down [npc2.her] soles, letting out [npc.a_moan+] with every lick.",
+          "Overcome with lust, [npc.name] eagerly [npc.verb(suck)] on [npc2.namePos] [npc2.toes+], tasting [npc2.her] [npc2.scent] on [npc.her] [npc.tongue].  Unable to control [npc.herself], [npc.name] [npc.verb(pull)] [npc2.her] [npc2.foot] from [npc.her] mouth and [npc.verb(begin)] dragging [npc.her] [npc.tongue] along the sole. ",
+          "[npc.Moaning] loudly, [npc.name] [npc.verb(savor)] the feeling of [npc2.namePos] [npc2.skin+] in [npc.her] mouth and on [npc.her] [npc.tongue], sucking desparately at each of [npc2.her] [npc2.toes+].  [npc.She] [npc.verb(pull)] [npc2.her] [npc2.toes] from [npc.her] [npc.lips] and [npc.verb(begin)] running [npc.her] [npc.tongue] along [npc2.her] sole. "
+      ));
 
-          "Desperately grasping [npc2.namePos] [npc2.feet+],"
-              + " [npc.name] [npc.verb(suckle)] on [npc2.her] [npc2.toes], letting out [npc.a_moan+] as [npc.she] [npc.verb(savor)] [npc2.her] [npc2.feet].",
-
-          "Greedily running [npc.her] [npc.tongue] all over [npc2.namePos] [npc2.feet+], [npc.name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(start)] to pull [npc2.her] [npc.feet] into [npc.her] face,"
-              + " breathing in [npc2.her] [npc2.scent]."));
-
-      UtilText.nodeContentSB.append(getTargetedCharacterResponse(this));
+      UtilText.nodeContentSB.append(getTargetedCharacterResponseSubEager(this));
 
       return UtilText.nodeContentSB.toString();
     }
@@ -469,12 +427,16 @@ public class MouthFeet {
       UtilText.nodeContentSB.setLength(0);
 
       switch (Sex.getSexPace(Sex.getCharacterPerformingAction())) {
+        case DOM_GENTLE:
+        case DOM_NORMAL:
         case DOM_ROUGH:
-          UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-              "Roughly grabbing [npc2.namePos] [npc2.feet+] from [npc.her] face,"
-                  + " [npc.name] gives [npc2.her] [npc2.toes+] one last nibble before pulling [npc2.her] [npc2.feet] away.",
 
-              "Giving [npc2.namePos] [npc2.feet+] one last bite, [npc.name] then [npc.verb(move)] [npc2.her] [npc2.feet] back, stopping the worship for now."));
+          UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
+//              "Roughly grabbing [npc2.namePos] [npc2.feet+] from [npc.her] face,"
+//                  + " [npc.name] gives [npc2.her] [npc2.toes+] one last nibble before pulling [npc2.her] [npc2.feet] away.",
+//
+//              "Giving [npc2.namePos] [npc2.feet+] one last bite, [npc.name] then [npc.verb(move)] [npc2.her] [npc2.feet] back, stopping the worship for now."
+ ));
           break;
         default:
           UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
@@ -520,7 +482,7 @@ public class MouthFeet {
 
     @Override
     public String getActionTitle() {
-      return "Give [npc.toes]";
+      return "Get [npc.toes] sucked";
     }
 
     @Override
@@ -591,7 +553,7 @@ public class MouthFeet {
       UtilText.nodeContentSB.setLength(0);
 
       UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-          "Pulling [npc.her] [npc.toes+] from [npc2.namePos] mouth, [npc.name] [npc.verb(place)] one [npc.foot] on [npc2.her] cheek and the other on [npc2.her] [npc2.face], drumming [npc.her] [npc.toes] on [npc2.her] [npc2.skin+]. ",
+          "Pulling [npc.her] [npc.toes+] from [npc2.namePos] mouth, [npc.name] [npc.verb(place)] one [npc.foot] on [npc2.her] cheek and the other on [npc2.her] [npc2.face], drumming [npc.her] [npc.toes] on [npc2.her] [npc2.faceSkin+]. ",
           "With a soft [npc.moan], [npc.name] [npc.verb(pull)] [npc.her] [npc.toes+] from [npc2.namePos] [npc2.mouth] and [npc.verb(rub)] [npc.her] [npc.feet] over [npc2.her] [npc2.face]. [npc.speech(Such a good [npc.foot][npc2.girl] you are…)] ",
           "[npc.name] [npc.verb(pull)] [npc.her] [npc.toes+] from [npc2.her] mouth and [npc.verb(place)] the base one [npc.foot] on [npc2.her] chin, giving [npc2.her] nose a squeeze with [npc.her] [npc.toes] before placing it over [npc2.her] face. "
       ));
@@ -631,7 +593,7 @@ public class MouthFeet {
       UtilText.nodeContentSB.setLength(0);
 
       UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-          "Enjoying having [npc.her] [npc.toes+] sucked on,[npc.name] [npc.verb(rub)] the other [npc.foot] along the side of[npc2.namePos][npc2.face] affectionately.[npc.speech(That's right, suck them nice and good...)] ",
+          "Enjoying having [npc.her] [npc.toes+] sucked on, [npc.name] [npc.verb(rub)] the other [npc.foot] along the side of [npc2.namePos] [npc2.face] affectionately.[npc.speech(That's right, suck them nice and good...)] ",
           "[npc.name] [npc.verb(let)] out [npc.a_moan] as [npc.she] [npc.verb(wiggle)] [npc.her] [npc.toes+] in [npc2.namePos] mouth, enjoying the sensation. [npc.speech(Fuck, that feels good, keep going...)] ",
           "[npc.speech(You like my [npc.toes+]?)], [npc.name] [npc.moansVerb], as [npc.she] slowly [npc.verb(drag)] [npc.her] [npc.toes] along [npc2.namePos] [npc2.tongue] before shoving them right back in [npc2.her] mouth. "));
 
@@ -864,28 +826,42 @@ public class MouthFeet {
       UtilText.nodeContentSB.setLength(0);
 
       switch (Sex.getSexPace(Sex.getCharacterPerformingAction())) {
+        case DOM_GENTLE:
+        case DOM_NORMAL:
         case DOM_ROUGH:
           UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-              "*DOM_ROUGH*"));
-//              "Taking [npc.her] [npc.feet] away from [npc2.namePos] face, [npc.name] [npc.verb(let)] out a menacing growl as [npc.she] [npc.verb(command)] [npc2.herHim] to leave [npc.her] [npc.feet] alone.",
-//
-//              "[npc2.Name] [npc2.verb(bury)] into [npc.namePos] [npc.feet+] one last time, inhaling [npc.her] [npc.scent] before [npc.name] [npc.verb(take)] [npc.her] [npc.feet] away from [npc2.her] [npc2.lips]."));
+              "Rubbing one [npc.foot] on the side of [npc2.namePos] head, [npc.name] [npc.verb(slide)] [npc.her] [npc.toes+] from [npc2.her] mouth and [npc.verb(tap)] [npc2.herHim] on the nose with them before pulling [npc.her] [npc.legs] away from [npc2.herHim]. ",
+              "[npc.speech(That's enough for now)], [npc.name] [npc.moansVerb], before retracting [npc.her] [npc.toes+] from [npc2.namePos] mouth. [npc.She] [npc.verb(give)] [npc2.her] [npc2.face] one last push with [npc.her] [npc.foot] before pulling [npc.her] [npc.legs] back. ",
+              "[npc.namePos] [npc.verb(pull)] [npc.her] [npc.toes+] from [npc2.namePos] [npc2.lips] and [npc.verb(wiggle)] them in front of [npc2.her] [npc2.face]. [npc.speech(You did such a good job with these)], [npc.she] [npc.verb(smirk)], then [npc.verb(pull)] [npc.her] [npc.feet] away from [npc2.her] [npc2.face]. "
+          ));
+          break;
+        case SUB_EAGER:
+        case SUB_NORMAL:
+        case SUB_RESISTING:
+          //TODO
           break;
         default:
-          UtilText.nodeContentSB.append(Sex.getSexPace(Sex.getCharacterPerformingAction()).getName() + " " + Sex.getSexPace(Sex.getCharacterPerformingAction()).isDom());
-//              "Taking [npc.her] [npc.feet] away from [npc2.namePos] face, [npc.name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(tell)] [npc2.herHim] to leave [npc.her] [npc.feet] alone.",
-//
-//              "[npc2.Name] [npc2.verb(lean)] into [npc.namePos] [npc.feet+], inhaling [npc.her] [npc.scent] before [npc.name] [npc.verb(take)] [npc.her] [npc.feet] away from [npc2.her] [npc2.lips]."));
           break;
       }
 
       switch (Sex.getSexPace(Sex.getCharacterTargetedForSexAction(this))) {
+        case SUB_EAGER:
+          UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
+              "[npc2.name] [npc2.verb(let)] out a wimper and [npc2.verb(attempt)] to shove the [npc.foot] back in [npc2.her] mouth, only for [npc.name] to yank it back. npc.speech(I said no!)], [npc.she] [npc.verb(exclaim)], and [npc.verb(push)] [npc2.her] head away with [npc.her] [npc.foot]. [npc2.name] [npc2.verb(decide)] to obey [npc.herHim)."
+          ));
+          break;
+        case SUB_NORMAL:
+          UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
+              "Before [npc.she] can, [npc2.name] [npc2.verb(give)] each [npc.foot] one last squeeze, giving [npc.herHim] a smile and eagerly awaiting what [npc.name] has in store for [npc2.herHim] next."
+          ));
+          break;
         case SUB_RESISTING:
           UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
               " [npc2.Name] [npc2.verb(let)] out a relieved sigh, which soon turns into [npc2.a_sob+] as [npc2.she] realises that [npc.name] [npc.has]n't finished with [npc2.herHim] just yet.",
 
               " With [npc2.a_sob+], [npc2.name] [npc2.verb(continue)] to protest and struggle against [npc.name] as [npc.she] [npc.verb(hold)] [npc2.herHim] firmly in place."));
           break;
+
         default:
           UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
               " [npc2.A_moan+] escapes from against [npc2.namePos] [npc2.lips+], betraying [npc2.her] desire to continue enjoying [npc.her] [npc.feet]."));
@@ -904,12 +880,6 @@ public class MouthFeet {
         break;
       case DOM_NORMAL:
         UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(" *DOM_NORMAL*"));
-//            " [npc2.Name] [npc2.verb(start)] eagerly pressing [npc2.her] [npc2.feet+] into [npc.namePos] face in response,"
-//                + " letting out [npc2.a_moan+] as [npc.she] [npc.verb(worship)] [npc2.herHim] [npc2.feet].",
-//
-//            " [npc2.A_moan+] bursts out from between [npc2.namePos] [npc2.lips+] as [npc2.she] eagerly [npc2.verb(press)] [npc2.her] [npc2.feet+] into [npc.namePos] face.",
-//
-//            " [npc2.Moaning] in delight, [npc2.name] eagerly [npc2.verb(press)] [npc2.her] [npc2.feet+] into [npc.namePos] face as [npc.she] [npc.verb(worship)] [npc2.herHim] [npc2.feet]."));
         break;
       case SUB_RESISTING:
         UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(" *SUB_RESISTING*"));
@@ -924,21 +894,9 @@ public class MouthFeet {
         break;
       case SUB_NORMAL:
         UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(" *SUB_NORMAL*"));
-//            " [npc2.Name] [npc2.verb(start)] pressing [npc2.her] [npc2.feet+] into [npc.namePos] face in response,"
-//                + " letting out [npc2.a_moan+] as [npc.name] [npc.verb(lick)] [npc2.herHim] [npc2.feet].",
-//
-//            " [npc2.A_moan+] bursts out from between [npc2.namePos] [npc2.lips+] as [npc2.she] [npc2.verb(push)] [npc2.her] [npc2.feet+] into [npc.namePos] face.",
-//
-//            " [npc2.Moaning] in delight, [npc2.name] [npc2.verb(push)] [npc2.her] [npc2.feet+] into [npc.namePos] face as [npc.she] [npc.verb(lick)] them."));
         break;
       case DOM_GENTLE:
         UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(" *DOM_GENTLE*"));
-//            " [npc2.Name] [npc2.verb(start)] pushing [npc2.her] [npc2.feet+] into [npc.namePos] face in response,"
-//                + " letting out [npc2.a_moan+] as [npc.name] [npc.verb(kiss)] them.",
-//
-//            " [npc2.A_moan+] bursts out from between [npc2.namePos] [npc2.lips+] as [npc2.she] gently [npc2.verb(rub)] [npc2.her] [npc2.feet+] into [npc.namePos] face.",
-//
-//            " [npc2.Moaning] in delight, [npc2.name] softly [npc2.verb(press)] [npc2.her] [npc2.feet+] into [npc.namePos] face as [npc.she] [npc.verb(kiss)] them."));
         break;
       case DOM_ROUGH:
         switch (Sex.getCharacterPerformingAction().getLegType().getFootType()) {
@@ -980,6 +938,27 @@ public class MouthFeet {
     return "";
   }
 
+  private static String getTargetedCharacterResponseSubEager(SexAction action) {
+    switch (Sex.getSexPace(Sex.getCharacterTargetedForSexAction(action))) {
+      case DOM_GENTLE:
+        return UtilText.returnStringAtRandom(
+            "[npc2.name] [npc2.moansVerb], pressing [npc2.her] [npc2.foot] into [npc.namePos] [npc.tongue]. [npc2.She] [npc2.verb(let)] [npc.herHim] enjoy [npc.herself], closing [npc2.her] [npc2.eyes] as [npc.name] [npc.verb(finish)] licking [npc2.her] [npc2.foot] and [npc.verb(bring)] [npc2.her] [npc2.toes] back into [npc.her] mouth.",
+            "[npc2.speech(Aw, aren't you just the cutest? So eager to taste my [npc2.feet]...)], [npc2.namePos] [npc2.moansVerb], rubbing [npc2.her] other [npc2.foot] along the side of [npc.her] [npc.face]. With [npc.a_moan], [npc.name] hungrily [npc.verb(grab)] the [npc2.foot] from [npc.her] cheek and [npc.verb(shove)] [npc2.namePos] [npc2.toes] in [npc.her] mouth."
+        );
+      case DOM_NORMAL:
+        return UtilText.returnStringAtRandom(
+            "Letting out [npc2.a_moan], [npc2.name] eagerly presses [npc2.her] [npc2.foot] into [npc.her] [npc.tongue].  Bringing up [npc2.her] other [npc2.foot], [npc2.she] [npc2.verb(wiggle)] [npc2.her] [npc2.toes] in front of [npc.name]. [npc2.speech(This one needs love too.)], [npc2.she] [npc2.moansVerb], pushing [npc2.her] [npc2.toes] into [npc.her] mouth.",
+            "[npc2.speech(Yes, taste my entire [npc2.foot]!)], [npc2.name] [npc2.moansVerb], dragging the sole of [npc2.her] [npc2.foot] across [npc.namePos] [npc.tongue]. [npc2.She] then [npc2.verb(run)] [npc2.her] [npc2.toes] across [npc.her] [npc.tongue], ensuring each one is loved, before pushing [npc2.her] [npc2.toes] back in [npc.her] mouth."
+        );
+      case DOM_ROUGH:
+        return UtilText.returnStringAtRandom(
+            "[npc2.speech(That's right little footboy, lick it harder)], [npc2.name] [npc2.moansVerb], grinding [npc2.her] [npc2.foot] into [npc.namePos] [npc.face]. Putting [npc2.her] [npc2.toes] to [npc.her] [npc.lips], [npc2.name] roughly [npc2.verb(shove)] [npc2.her] [npc2.toes] down [npc.name] throat, causing [npc.her] to gag, before laughing and allowing [npc.her] to resume sucking on [npc2.her] [npc2.toes].",
+            "[npc2.name] roughly [npc2.verb(pull)] [npc2.her] [npc2.foot] away and [npc2.verb(slap)] [npc.name] in the [npc.face] with it. npc2.speech(Did I say you could stop sucking?), [npc2.she] [npc2.verb(scold)], before roughly shoving [npc2.her] [npc2.toes] back into [npc.namePos] mouth again."
+        );
+    }
+    return "";
+  }
+
   private static String getTargetedCharacterReceivingResponse(SexAction action, SexPace givingPace) {
     switch (Sex.getSexPace(Sex.getCharacterTargetedForSexAction(action))) {
       case SUB_EAGER:
@@ -999,7 +978,7 @@ public class MouthFeet {
           default:
             UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
                 "With [npc2.a_moan], [npc2.name] eagerly [npc2.verb(swirl)] [npc2.her] [npc2.tongue] over every one of [npc.namePos] [npc.toes], running it in between each one as [npc2.she] hungrily [npc2.verb(hold)] [npc.her] [npc.foot] in [npc2.her] mouth.",
-                "[npc2.Moaning] in response, [npc2.name] hungrily [npc2.verb(savor)] each of [npc.namePos] [npc.toes], running  [npc2.her] [npc2.tongue]over each of them. [npc2.She] then [npc2.verb(remove)] the [npc.foot] from [npc2.her] mouth and [npc2.verb(begin)] sucking the other one, eager to have [npc.namePos] [npc.toes] in [npc2.her] mouth again."
+                "[npc2.Moaning] in response, [npc2.name] hungrily [npc2.verb(savor)] each of [npc.namePos] [npc.toes], running  [npc2.her] [npc2.tongue] over each of them. [npc2.She] then [npc2.verb(remove)] the [npc.foot] from [npc2.her] mouth and [npc2.verb(begin)] sucking the other one, eager to have [npc.namePos] [npc.toes] in [npc2.her] mouth again."
             ));
         }
         break;
@@ -1008,13 +987,13 @@ public class MouthFeet {
           case DOM_GENTLE:
             UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
                 "[npc2.A_moan] escapes [npc2.namePos] [npc2.lips] as [npc2.she] [npc2.verb(plant)] kisses on [npc.namePos] [npc.foot], starting at the heel and working [npc2.her] way up, finally taking [npc.namePos] [npc.toes] back in [npc2.her] mouth.",
-                "With [npc2.a_moan], [npc2.name] [npc2.verb(give)] [npc.namePos] [npc.foot] a long, slow lick from the heel to [npc.her] [npc.toes], before placing [npc.her [npc.toes] back into [npc2.her] mouth."
+                "With [npc2.a_moan], [npc2.name] [npc2.verb(give)] [npc.namePos] [npc.foot] a long, slow lick from the heel to [npc.her] [npc.toes], before placing [npc.her] [npc.toes] back into [npc2.her] mouth."
             ));
             break;
           case DOM_ROUGH:
             UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-                "[npc2.name] [npc2.was] not prepared for this and immediately [npc2.verb(pull)] [npc.her] [npc.foot] from [npc2.her] mouth, coughing and sputtering. [npc2.name] [npc2.verb(let)] out a little chuckle, and [npc2.verb(begin)] sucking on [npc.her] [npc.toes] once more.",
-                "[npc2.name] [npc2.verb(let)] out a startled grunt, coughing a bit as [npc2.she] [npc2.verb(attempt)] to deepthroat [npc.her] [npc.toes]. [npc2.name] [npc2.do] not last long, and soon [npc2.is] forced to pull [npc.namePos] [npc.foot] away to catch [npc2.her] breath. Still, it isn't long before [npc2.she] [npc2.verb(take)] [npc.namePos] [npc.toes] back in [npc2.her] mouth."
+                "[npc2.name] [npc2.was] not prepared for this and immediately [npc2.verb(pull)] [npc.her] [npc.foot] from [npc2.her] mouth, coughing and sputtering. [npc2.name] [npc2.verb(let)] out a little chuckle, right before [npc.name] [npc.verb(shove)] [npc.her] [npc.toes] back into [npc2.her] mouth.",
+                "[npc2.name] [npc2.verb(let)] out a startled grunt, coughing a bit as [npc2.she] [npc2.verb(attempt)] to deepthroat [npc.her] [npc.toes]. [npc2.name] [npc2.do] not last long, and soon [npc2.is] forced to pull [npc.namePos] [npc.foot] away to catch [npc2.her] breath. Just when [npc2.she] [npc2.verb(recover)], [npc.name] [npc.verb(smile)] and [npc.verb(force)] [npc.her] [npc.toes] back in [npc2.her] mouth."
             ));
             break;
           default:
