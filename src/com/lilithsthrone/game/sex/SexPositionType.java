@@ -241,7 +241,8 @@ public enum SexPositionType {
 													SexActionPresets.penisToThighs,
 													SexActionPresets.kissing,
 													SexActionPresets.mouthToBreasts,
-													SexActionPresets.breastsToMouth),
+													SexActionPresets.breastsToMouth,
+													SexActionPresets.mouthToFeet),
 											Util.newArrayListOfValues(
 													OrgasmCumTarget.SELF_STOMACH,
 													OrgasmCumTarget.SELF_BREASTS,
@@ -3678,7 +3679,7 @@ public enum SexPositionType {
 	}
 	
 	public SexActionInteractions getSexInteractions(SexPositionSlot performer, SexPositionSlot target) {
-		if(slotTargets.get(performer).containsKey(target)) {
+		if(slotTargets.containsKey(performer) && slotTargets.get(performer).containsKey(target)) {
 			return slotTargets.get(performer).get(target);
 		}
 		
